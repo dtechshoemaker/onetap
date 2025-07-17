@@ -1,1 +1,11 @@
-this is the registration page
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <form action="/" method="post" class="mx-5">
+            {% csrf_token %}
+            {{user_form.as_p}}
+            <button type="submit" class="btn btn-primary">register</button>
+        </form>
+    </div>
+{% endblock %}
